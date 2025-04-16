@@ -17,28 +17,55 @@ section {
   background: rgba(44, 28, 56, 0.219);
   border-radius: 20px 0px;
   padding: 1rem;
+  max-height: 500px;
+  overflow-y: auto;
+  width: 100%;
 }
 
-section strong {
+section.blog {
+  width: 800px;
+}
+
+section::-webkit-scrollbar {
+  width: 8px;
+}
+
+section::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+section::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+section::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+strong {
+  background-image: linear-gradient(to right, rgb(100, 100, 255), rgb(50, 180, 255), rgb(0, 200, 120));
   font-family: 'Doto', monospace;
-  font-weight: 700;
+  -webkit-background-clip: text;
+  color: transparent;
   font-style: normal;
   text-transform: uppercase;
-  font-size: 24px;
-  color: rgb(130, 209, 170);
   letter-spacing: 0.1em;
+  font-weight: 900;
+  font-size: 18px;
+  background-size: 100% 100%;
 }
 
 hr {
   border: none;
   height: 4px;
-  background: linear-gradient(to right, rgb(121, 130, 255), rgb(91, 206, 226), rgb(130, 209, 170));
+  background: linear-gradient(to right, rgb(100, 100, 255), rgb(50, 180, 255), rgb(0, 200, 120));
   margin: 2em 0;
 }
 
 h1 {
   color: #e6e0b3;
-  background-image: linear-gradient(to right, rgb(121, 130, 255), rgb(91, 206, 226), rgb(130, 209, 170));
+  background-image: linear-gradient(to right, rgb(100, 100, 255), rgb(50, 180, 255), rgb(0, 200, 120));
   border-radius: 20px 0px;
   font-family: 'Doto', monospace;
   font-weight: 700;
@@ -89,6 +116,19 @@ nav a:link, a:visited, a:active {
 
 nav a:hover {
   background-color: rgba(91, 206, 226, 0.25);
+  color:rgb(255, 255, 255);
+
+}
+
+a {
+  color:rgb(255, 255, 255);
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+a:hover {
+  color: rgb(100, 100, 255)
 }
 
 #index {
@@ -109,6 +149,7 @@ padding: 1rem 0rem;
   align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
+  width: 100%;
 }
 
 .container-y {
@@ -131,10 +172,6 @@ padding: 1rem 0rem;
   object-fit: contain;
 }
 
-.text {
-  margin-left: 2rem;
-}
-
 .art-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -155,3 +192,4 @@ padding: 1rem 0rem;
   object-fit: cover;
   display: block;
 }
+
